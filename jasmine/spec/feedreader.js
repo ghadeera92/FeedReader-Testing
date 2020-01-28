@@ -73,15 +73,12 @@ $(function() {
       * and feed has at least one entry
       */
          beforeEach(function(done) {
-             loadFeed(0, function() {
-                 done();
-             });
+             loadFeed(0, done);
          });
 
-         it('Feed has at Least One Entry', function(done) {
+         it('Feed has at Least One Entry', function() {
            let entryWithinFeed = $('.feed .entry');
              expect(entryWithinFeed.length).toBeGreaterThan(0);
-             done();
          });
        });
 
